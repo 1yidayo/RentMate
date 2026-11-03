@@ -30,7 +30,7 @@ def _parse_json_response(raw: str) -> dict:
         raise ValueError(f"無法從 AI 回應中解析 JSON。原始回應：\n{raw[:300]}")
 
 client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
-MODEL = "gemini-3.8-flash"
+MODEL = "gemini-3.6-flash"
 
 EXTRACT_PROMPT = """你是一個租屋資訊擷取助理。請從以下租屋貼文或網頁文字中，擷取房屋資訊並以 JSON 格式回傳。
 
